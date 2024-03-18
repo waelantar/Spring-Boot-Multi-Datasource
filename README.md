@@ -92,4 +92,4 @@ The main goal of this repository is to provide clear guidance without delving to
 This project is licensed under the MIT License.
 ## Contact Information
 
-For any inquiries or feedback, you can contact me via email at antarwael@ieee.org or connect with me on [Linkedin]([https://github.com](https://www.linkedin.com/in/wael-antar/)https://www.linkedin.com/in/wael-antar/).
+For any inquiries or feedback, you can contact me via email at antarwael@ieee.org or connect with me on [Linkedin]([https://www.linkedin.com/in/wael-antar/]).
