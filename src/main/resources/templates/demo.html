@@ -86,7 +86,7 @@
         <ul class="user-data">
             <li th:each="user : ${users}" th:text="${user.username} + ' (' + ${user.email} + ')'"></li>
         </ul>
-        <form action="/redirect" method="get">
+        <form action="/redirect/user" method="get">
             <button type="submit">Add User</button>
         </form>
     </div>
@@ -96,7 +96,7 @@
         <ul class="product-data">
             <li th:each="product : ${products}" th:text="${product.name} + ' - ' + ${product.description}"></li>
         </ul>
-        <form action="/predirect" method="get">
+        <form action="/redirect/product" method="get">
             <button type="submit">Add Product</button>
         </form>
     </div>

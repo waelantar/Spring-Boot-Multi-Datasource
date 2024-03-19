@@ -2,7 +2,6 @@ package com.example.springbootmultidatasource.entity.User;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Entity
 @Data
