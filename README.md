@@ -86,7 +86,7 @@ If you encounter a null pointer error related to EntityManagerFactoryBuilder, en
 Also, remember to add the necessary annotations to your classes (@Entity, @Repository, @Service, @Controller, @Configuration). For entities, don't forget @Data, and use @Autowired when one class calls another. Ensure consistency between property names in your code and the application.properties file for successful connection.
 ## Contributing
 
-The main goal of this repository is to provide clear guidance without delving too deeply into the details. If you find any issues or have additional information to contribute, feel free to create an issue or fork the project. Submit a pull request, and I'll gladly review it.
+The main goal of this repository is to provide clear guidance without delving too deeply into the details. If you find any issues or have additional information to contribute, feel free to create an issue or fork the project and create you own branch. Submit a pull request, and I'll gladly review it.
 ## License
 
 This project is licensed under the MIT License.
