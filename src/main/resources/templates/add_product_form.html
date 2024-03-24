@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product Form - Spring Boot Multi-Data Source Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<h1>Add Product Form</h1>
+
+<p>This form allows you to add a new product to the system.</p>
+
+<form action="#" th:action="@{/products/add}" method="post" th:object="${product}">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" th:field="*{name}"/><br/>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" th:field="*{description}"/><br/>
+    <label for="price">Price:</label>
+    <input type="text" id="price" name="price" th:field="*{price}"/><br/>
+    <button type="submit">Add Product</button>
+</form>
+
+</body>
+</html>

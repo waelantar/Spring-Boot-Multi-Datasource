@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot Multi-Data Source Demo</title>
+    <style>
+        body {
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: red;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .container1 {
+            align-content: center;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .section {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            text-align: center; /* Center align titles */
+        }
+
+        .user-data, .product-data {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0; /* Add space between list and title */
+        }
+
+        .user-data li, .product-data li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .user-section {
+            background-color: #f5f3f4; /* Light blue for user section */
+        }
+
+        .product-section {
+            background-color: #f9f7f6; /* Light grey for product section */
+        }
+    </style>
+</head>
+<body>
+<div class="container1">
+<h1>Spring Boot Multi-Data Source Demo</h1>
+
+<p>Welcome! This is a demonstration showcasing the power of using multiple data sources within a Spring Boot application.</p>
+
+<p>This demo retrieves data from two separate databases and displays it in a user-friendly format. This allows you to manage different types of data efficiently, even if they reside in different locations.</p>
+</div>
+<div class="container">
+    <div class="section user-section">
+        <h2 th:text="${userDbTitle}"/>
+        <ul class="user-data">
+            <li th:each="user : ${users}" th:text="${user.username} + ' (' + ${user.email} + ')'"></li>
+        </ul>
+        <form action="/redirect/user" method="get">
+            <button type="submit">Add User</button>
+        </form>
+    </div>
+
+    <div class="section product-section">
+        <h2 th:text="${productDbTitle}"/>
+        <ul class="product-data">
+            <li th:each="product : ${products}" th:text="${product.name} + ' - ' + ${product.description}"></li>
+        </ul>
+        <form action="/redirect/product" method="get">
+            <button type="submit">Add Product</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
